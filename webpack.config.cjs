@@ -1,4 +1,6 @@
 const path = require("path");
+const CopyWebpackPlugin = require("copy-webpack-plugin");
+const { default: CopyPlugin } = require("copy-webpack-plugin");
 
 module.exports = {
   entry: {
@@ -31,6 +33,14 @@ module.exports = {
     hot: true,
   },
   resolve: {
-    extensions: [".js", ".jsx", ".ts", ".tsx", ".css"],
+    extensions: [".js", ".jsx", ".ts", ".tsx", ".css", ".png"],
   },
+  // plugins: [
+  //   new CopyWebpackPlugin([
+  //     {
+  //       from: "./public/img/image",
+  //       to: "./public/img/image",
+  //     },
+  //   ]),
+  // ],
 };
